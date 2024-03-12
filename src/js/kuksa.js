@@ -75,7 +75,7 @@ function add_subscribe_entry(path) {
     kuksa_context.subscribe_entries.push(entry);
 }
 
-import fs from 'fs';
+// import fs from 'fs';
 
 function subscribe() {
     if (kuksa_context.client == undefined) {
@@ -107,12 +107,13 @@ function subscribe() {
 
             lock(path);
             updateVehicleInfo(path, dp);
+            console.log("Path :" +path+ " Data : " +dp)
             unlock(path);
 
             // Log dp and path values to a file
-            fs.appendFile('/lib/wam_apps/html5-mixer/data_log.txt', `Path: ${path}, DP value: ${dp}\n`, function (err) {
+            /*fs.appendFile('/lib/wam_apps/html5-mixer/data_log.txt', `Path: ${path}, DP value: ${dp}\n`, function (err) {
                 if (err) throw err;
-            });
+            });*/
         }
     });
 
@@ -123,9 +124,9 @@ function subscribe() {
         subscribe();
 
         // Log error code and message to a file
-        fs.appendFile('/lib/wam_apps/html5-mixer/error_log.txt', `Error code: ${error.code}, Message: ${error.message}\n`, function (err) {
+        /*fs.appendFile('/lib/wam_apps/html5-mixer/error_log.txt', `Error code: ${error.code}, Message: ${error.message}\n`, function (err) {
             if (err) throw err;
-        });
+        });*/
     });
 }
 
