@@ -1,0 +1,30 @@
+$colors: (
+  primary:          #2962ff,
+  font:             #c1d8ff,
+  grey:             #1c2d92
+);
+@media (max-device-width: 720px) and (orientation: portrait) {
+    @import "main.scss";
+    @import "portrait.scss";
+    @import "720.scss";
+}
+
+@media (max-device-width: 1280px) and (orientation: landscape) {
+    @import "main.scss";
+    @import "landscape.scss";
+    @import "720.scss";
+}
+
+@media (min-device-width: 1080px) and (orientation: portrait) {
+    @import "main.scss";
+    @import "portrait.scss";
+    @import "1080.scss";
+}
+
+@media (min-device-width: 1490px) and (orientation: landscape) {
+    @import "main.scss";
+    @import "landscape.scss";
+    @import "1080.scss";
+}
+
+@import "style.css";

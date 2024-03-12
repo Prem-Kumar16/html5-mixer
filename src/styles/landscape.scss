@@ -1,0 +1,18 @@
+@media (orientation: landscape) {
+
+    html {
+        background-image: url('../images/dashboardTextures.svg');
+        background-color: black;
+    }
+
+    body {
+        .content {
+            .sliderContainer {
+                flex-direction: row;
+                .entry {
+                    flex: 50%;
+                }
+            }
+        }
+    }
+}
